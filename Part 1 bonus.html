@@ -1,0 +1,5 @@
+SELECT i.itemName, c.orderQty, c.price, o.orderTotalPayout
+FROM items i
+JOIN carttable c ON i.itemCode = c.cartID
+JOIN orderstable o ON o.orderID = c.cartID
+WHERE o.orderID = [Bryan's order ID];
